@@ -7,8 +7,13 @@
 using namespace ariel;
 using namespace std;
 
-
-
+string nospaces(string input) {
+	std::erase(input, ' ');
+	std::erase(input, '\t');
+	std::erase(input, '\n');
+	std::erase(input, '\r');
+	return input;
+}
 
 
 TEST_CASE("check if the snowman is good or not"){
