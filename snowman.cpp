@@ -51,8 +51,7 @@ using namespace std;
 
             while(counter < length){
 
-                selection = num%10; // to get the last digit
-                selection-1; // for the number to be between 0-3
+                selection = num%10-1; // to get the last digit and -1 for the number to be between 0-3
 
                if(selection < 0 || selection > 3){ 
                     throw runtime_error {"Exception - Invalid code"}; // means that there are digits that bigger than 4 or smaller than 1
