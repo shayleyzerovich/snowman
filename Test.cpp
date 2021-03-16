@@ -13,14 +13,14 @@ using namespace std;
 
 TEST_CASE("check if the snowman is good or not"){
 //good sonwman
-    CHECK(snowman(11111111) == string("      \n ===\n (.,.) \n<( : )>\n ( : )"));
-    CHECK(snowman(22222222) == string("  _ \n .....\n\\(o.o)/ \n (] [) \n (\" \")"));
-    CHECK(snowman(33333333) == string("   _  \n  /\\ \n (O_O) \n/(> <)\\\n (__)"));
-    CHECK(snowman(44444444) == string("  _ \n (*)\n (- -) \n (   ) \n (   ) "));
-    CHECK(snowman(31313131) == string("   _  \n  /_\\ \n (O,.) \n/(> <)>\n ( : )"));
-    CHECK(snowman(12121212) == string("      \n ===\n (..o)/\n<( : ) \n (\" \")"));
-    CHECK(snowman(43242312) == string("  _ \n (*)\n\\(o_-) \n ( : )\\\n (\" \")"));
-    CHECK(snowman(44241342) == string("  _ \n (*)\n (o -) \n<(   )\\\n (\" \")"));
+    CHECK(nospaces(snowman(11114411)) == nospaces("_===_\n(.,.)\n( : )\n( : )"));
+    CHECK(nospaces(snowman(11223344)) == nospaces("_===_\n(o,o)\n/(   )\\\n(   )"));
+    CHECK(nospaces(snowman(11111111)) == nospaces("_===_\n(.,.)\n<( : )>\n( : )"));
+    CHECK(nospaces(snowman(22222222)) == nospaces("___\n.....\n\\(o.o)/\n(] [)\n(\" \")"));
+    CHECK(nospaces(snowman(33333333)) == nospaces("_\n/_\\\n(O_O)\n/(> <)\\\n(___)"));
+    CHECK(nospaces(snowman(44444444)) == nospaces("___\n(_*_)\n(- -)\n(   )\n(   )"));
+    CHECK(nospaces(snowman(34231234)) == nospaces("_\n/_\\\n(o O)/\n<(> <)\n(   )"));
+
 //too many digits
     CHECK_THROWS(snowman(123412341));
     CHECK_THROWS(snowman(343421213));
