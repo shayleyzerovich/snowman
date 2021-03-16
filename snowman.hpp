@@ -2,6 +2,6 @@
 #include<iostream>
 using namespace std;
 
-namespace ariel {
-    string snowman(int);
-}
+namespace ariel{
+    string snowman(int num);
+};
