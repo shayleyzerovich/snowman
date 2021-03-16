@@ -40,6 +40,10 @@ using namespace std;
 
     namespace ariel{
         string snowman(int num){
+            
+            if(num < 11111111 || num > 44444444){ 
+                    throw runtime_error {"Exception - Invalid code"}; // means that there are more/less than 8 digits
+               }
 
             int counter = 0;
             array<string, length> arr; // to help print the snowman
