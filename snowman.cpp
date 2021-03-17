@@ -42,7 +42,7 @@ using namespace std;
         string snowman(int num){
             
             if(num < 11111111 || num > 44444444){ 
-                    throw runtime_error {"Exception - Invalid code"}; // means that there are more/less than 8 digits
+                    throw runtime_error {"Exception - Invalid code "}; // means that there are more/less than 8 digits
                }
 
             int counter = 0;
@@ -54,7 +54,7 @@ using namespace std;
                 selection = num%10-1; // to get the last digit and -1 for the number to be between 0-3
 
                if(selection < 0 || selection > 3){ 
-                    throw runtime_error {"Exception - Invalid code"}; // means that there are digits that bigger than 4 or smaller than 1
+                    throw runtime_error {"Exception - Invalid code : there are digits that bigger than 4 or smaller than 1"}; 
                }
                  num /=10; // to cut the last digit
                  arr.at(counter) = translation.at(counter)[selection];
